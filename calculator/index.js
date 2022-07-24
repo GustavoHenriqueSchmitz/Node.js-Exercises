@@ -1,5 +1,5 @@
-const calculator = require('./packages/calculator.js')
-const readline = require('readline-sync');
+import  readline from 'readline-sync'
+import calculator from './packages/calculator.js'
 
 console.log('-----------------------------------------------------')
 console.log('Initing calculator...')
@@ -28,31 +28,31 @@ while (true) {
     let n1 = Number(readline.question('Num1: '))
     let n2 = Number(readline.question('Num1: '))
 
-    if (action == 'sum') {
+    if (action === 'sum') {
         let sumResult = calculator.sum(n1,n2)
         console.log('-----------------------------------------------------')
         console.log('Resultado da soma: ', sumResult)
     } 
     
-    else if (action == 'sub') {
+    else if (action === 'sub') {
         let subResult = calculator.sub(n1,n2)
         console.log('-----------------------------------------------------')
         console.log('Resultado da subtração: ',subResult)
     }
 
-    else if (action == 'mul') {
+    else if (action === 'mul') {
         let mulResult = calculator.mul(n1,n2)
         console.log('-----------------------------------------------------')
         console.log('Resultado da multiplicação: ',mulResult)
     }
 
-    else if (action == 'div') {
+    else if (action === 'div') {
         let divResult = calculator.div(n1,n2)
         console.log('-----------------------------------------------------')
         console.log('Resultado da divisão: ',divResult)
     }
 
-    else if (action == 'pot') {
+    else if (action === 'pot') {
         let potResult = calculator.pot(n1,n2)
         console.log('-----------------------------------------------------')
         console.log('Resultado da potência: ',potResult)
